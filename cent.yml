@@ -1,0 +1,5 @@
+---
+- hosts: cent01
+  user: root
+  roles:
+    - centos
