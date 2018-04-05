@@ -1,0 +1,10 @@
+---
+- name: install libselinux-python
+  yum: name=libselinux-python state=present
+
+- name: disabled selinux
+  selinux:
+    policy: "{{ item.policy }}"
+    state: "{{ item.state }}"
+  with_items: "{{ selinux }}"
+  changed_when: false

@@ -1,0 +1,5 @@
+---
+- name: set locale
+  shell: localectl set-locale LANG="{{ locale }}"
+  register: set_locale
+  changed_when: false

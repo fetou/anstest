@@ -1,0 +1,6 @@
+zone: "Asia/Tokyo"
+
+locale: "ja_JP.utf8"
+
+selinux:
+ - { policy: targeted, state: disabled }

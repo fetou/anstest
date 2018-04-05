@@ -1,0 +1,10 @@
+---
+- name: set rtc timezone
+  shell: timedatectl set-local-rtc 0
+  register: set_rtc_timezone
+  changed_when: false
+
+- name: set timezone
+  shell: timedatectl set-timezone "{{ zone }}"
+  register: set_timezone
+  changed_when: false
